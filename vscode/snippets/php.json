@@ -1,0 +1,69 @@
+{
+	// Place your snippets for php here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+  // }
+
+    "echo": {
+    "prefix": "echo",
+    "body": [
+      "echo \"$1\"",
+    ],
+    "description": "exibi na saída padrão",
+  },
+
+  "Método mágico GET": {
+    "prefix": "__get",
+    "body": [
+            "public function __get(\\$${1:attr})",
+            "{",
+            "    return ${2:\\$this}->\\$${1:attr};",
+            "}",
+    ],
+    "description": "Método mágico GET"
+  },
+
+  "Método mágico SET": {
+      "prefix": "__set",
+      "body": [
+              "public function __set(\\$${1:attr}, \\$${2:value})",
+              "{",
+              "    ${3:\\$this}->\\$${1:attr} = \\$${2:value};",
+              "}",
+      ],
+      "description": "Método mágico SET"
+  },
+
+  "Operador Nullabel": {
+      "prefix": "if??",
+      "body": [
+              "\\$onc = \\$_${1:GET}[${2:id}] ?? '$3';"
+      ],
+      "description": "Operador Null Coalesce"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

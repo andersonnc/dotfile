@@ -1,0 +1,370 @@
+{
+	// Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+  // }
+
+  "For Aprimorada": {
+    "prefix": "for aprimorada",
+    "body": [
+            "for (${1:Tipo} ${2:obj} : ${3:array}) {",
+            "    ${2:obj}",
+            "}",
+    ],
+    "description": "Estrutura de repetição"
+  },
+  "For": {
+    "prefix": "for",
+    "body": [
+            "for (int ${1:i} = ${2:0}; ${1:i} < ${3:args}.length; ${1:i}++) {",
+            "    ${3:args}[${1:i}]",
+            "}",
+    ],
+    "description": "Estrutura de repetição"
+  },
+  "While": {
+      "prefix": "while",
+      "body": [
+              "while (${1:true}) {",
+              "    ${2:}",
+              "}",
+      ],
+      "description": "Estrutura de repetição"
+  },
+  "Do While": {
+    "prefix": "do while",
+    "body": [
+            "do {",
+            "    ${1:}",
+            "} while (${2:true});",
+    ],
+    "description": "Estrutura de repetição"
+  },
+  "If": {
+    "prefix": "if",
+    "body": [
+            "if (${1:true}) {",
+            "    ${2:}",
+            "}",
+    ],
+    "description": "Estrutura de seleção única"
+  },
+  "If Else": {
+    "prefix": "if else",
+    "body": [
+            "if (${1:true}) {",
+            "    ${2:}",
+            "} else {",
+            "    ${3:}",
+            "}",
+    ],
+    "description": "Estrutura de seleção dupla"
+  },
+  "if Else if": {
+    "prefix": "if else if",
+    "body": [
+            "if (${1:true}) {",
+            "    ${2:}",
+            "} else if (${3:false}) {",
+            "    ${4:}",
+            "} else {",
+            "    ${5:}",
+            "}",
+    ],
+    "description": "Estrutura de seleção múltipla"
+  },
+  "Operador Ternário": {
+    "prefix": "if ternário",
+    "body": [
+            "(${1:true} ${2:==} ${3:false}) : ${4:} ? ${5:}",
+    ],
+    "description": "Estrutura de seleção dupla"
+  },
+  "Switch": {
+    "prefix": "switch",
+    "body": [
+            "switch (${1:}) {",
+            "    case ${2:}:",
+            "        ${3:}",
+            "    break;",
+            "    default:",
+            "        ${4:}",
+            "    break;",
+            "}",
+    ],
+    "description": "Estrutura de seleção múltipla"
+  },
+  "Printf": {
+    "prefix": "printlf",
+    "body": [
+            "System.out.printf(\"${1:}\", ${2:});",
+    ],
+    "description": "Atalho para o comando System.out.format, exibi na saída padrão uma string formatado"
+  },
+  "Print": {
+    "prefix": "print",
+    "body": [
+            "System.out.print(${1:});",
+    ],
+    "description": "Exibir na saída padrão uma string sem quebra de linha"
+  },
+  "Println": {
+    "prefix": "println",
+    "body": [
+            "System.out.println(${1:});",
+    ],
+    "description": "Exibir na saída padrão string com quebra de linha"
+  },
+  "Current Time Millis": {
+    "prefix": "cronometro",
+    "body": [
+            "double ${1:tempo} = System.currentTimeMillis();",
+    ],
+    "description": "Cronômetro java, retorna um LONG ou DOUBLE"
+  },
+  "ArrayList": {
+    "prefix": "lista",
+    "body": [
+            "ArrayList<${1:Tipo}> ${2:array} = new ArrayList<${1:Tipo}>();",
+    ],
+    "description": "ArrayList, também conhecido com lista"
+  },
+  "Try": {
+    "prefix": "try",
+    "body": [
+            "try {",
+            "    ${1:}",
+            "} catch (${2:Exception} ${3:error}) {",
+            "    ${3:error}.${4:getMessage()};",
+            "    ${3:error}.${5:printStackTrace()};",
+            "} finally {",
+            "    ${6:}",
+            "}",
+    ],
+    "description": "Controle e exceção"
+  },
+  "Bloco Try Bloco Catch": {
+    "prefix": "try catch exception",
+    "body": [
+            "try {",
+            "    ${1:}",
+            "} catch (${2:Exception} ${3:error}) {",
+            "    ${3:error}.${5:getMessage()};",
+            "    ${3:error}.${6:printStackTrace()};",
+            "}",
+    ],
+    "description": "Controle de exceção"
+  },
+  "Bloco Try Bloco Catch Lista": {
+    "prefix": "try catch exception lista",
+    "body": [
+            "try {",
+            "    ${1:}",
+            "} catch (${2:Exception} | ${3:Exception} ${4:error}) {",
+            "    ${4:error}.${5:getMessage()};",
+            "    ${4:error}.${6:printStackTrace()};",
+            "}",
+    ],
+    "description": "Controle de exceção"
+  },
+  "Bloco Try Bloco Catch Thowble": {
+    "prefix": "try catch thowble",
+    "body": [
+            "try {",
+            "    ${1:}",
+            "} catch (${2:Throwable} ${3:error}) {",
+            "    ${3:error}.${4:getMessage()};",
+	          "    ${3:error}.${5:printStackTrace()};",
+            "}",
+    ],
+    "description": "Controle de exceção genérica"
+  },
+  "Main": {
+    "prefix": "main",
+    "body": [
+            "public class Index",
+            "{",
+            "    public static void main(String[] args)",
+            "    {",
+            "        ${1:}",
+            "    }",
+            "}",
+    ],
+    "description": "Classe main"
+  },
+  "Class Simples": {
+    "prefix": "class simple",
+    "body": [
+            "public class ${1:}",
+            "{",
+            "    private ${2:Tipo} ${3:variavel};",
+            "",
+            "    public ${1:}()",
+            "    {",
+            "        this(${3:parametro});",
+            "    }",
+            "}",
+    ],
+    "description": "Declaração de entidade curta"
+  },
+  "Classe Abstrata": {
+    "prefix": "class abstract",
+    "body": [
+            "public abstract class ${1:}",
+            "{",
+            "    privado ${2:Tipo} ${3:variavel}",
+            "",
+            "    public ${1:}()",
+            "    {",
+            "        ${4:}",
+            "    }",
+            "",
+            "    public abstract ${5:Tipo} ${6:}();",
+            "}",
+    ],
+    "description": "Declaração de entidade abstrata"
+  },
+  "Class Heranaça": {
+    "prefix": "class herança",
+    "body": [
+            "public class ${1:} extends ${2:}",
+            "{",
+            "    private ${3:Tipo} ${4:variavel};",
+            "",
+            "    public ${1:}()",
+            "    {",
+            "        this(${4:parametro});",
+            "    }",
+            "}",
+    ],
+    "description": "Declaração de entidade com herança"
+  },
+  "Class Completa": {
+    "prefix": "class completa",
+    "body": [
+            "public class ${1:} extends ${2:} implements ${3:}",
+            "{",
+            "    private ${4:Tipo} ${5:variavel};",
+            "",
+            "    public ${1:}()",
+            "    {",
+            "        this(${5:parametro});",
+            "    }",
+            "}",
+    ],
+    "description": "Declaração de entidade completa"
+  },
+  "Objeto": {
+    "prefix": "objeto",
+    "body": [
+            "${1:Classe} ${2:objeto} = new ${1:Classe}();",
+    ],
+    "description": "Instância de uma entidade"
+  },
+  "Objeto Construtor": {
+    "prefix": "objeto construtor",
+    "body": [
+            "${1:Classe} ${2:objeto} = new ${1:Classe}(${3:parametro});",
+    ],
+    "description": "Instância de uma entidade, mais o construtor"
+  },
+  "Get": {
+    "prefix": "metodo get",
+    "body": [
+            "public ${1:} get${2:}(){ return this.${3:variavel}; }",
+    ],
+    "description": "Método get"
+  },
+  "Set": {
+    "prefix": "metodo set",
+    "body": [
+            "public void set${1:}(${2:Tipo} ${3:parametro}){ this.${3:parametro} = ${3:parametro}; }",
+    ],
+    "description": "Método set"
+  },
+  "Is": {
+    "prefix": "metodo is",
+    "body": [
+            "public Boolean is${1:}(){ return this.${2:variavel}; }",
+    ],
+    "description": "Método is"
+  },
+  "ToString": {
+    "prefix": "metodo toString",
+    "body": [
+            "@Override",
+            "public String toString()",
+            "{",
+            "    return String.format(\"%${1:}\",${2:flag});",
+            "}",
+    ],
+    "description": "Método toString, retorno uma string no objeto"
+  },
+  "Interface Simple": {
+    "prefix": "interface simples",
+    "body": [
+            "public interface ${1:}",
+            "{",
+            "    public final ${2:Tipo} ${3:constante};",
+            "",
+            "    public abstract void ${4:}();",
+            "}",
+    ],
+    "description": "Interface simple"
+  },
+  "Interface Herança": {
+    "prefix": "interface herança",
+    "body": [
+            "public interface ${1:} extends ${2:}",
+            "{",
+            "    public final ${3:Tipo} ${4:constante};",
+            "",
+            "    public abstract void ${5:}();",
+            "}",
+    ],
+    "description": "Interface com herança"
+  },
+  "Enum Simples": {
+    "prefix": "enum simple",
+    "body": [
+            "public enum ${1:}",
+            "{",
+            "    ${2:CONSTANTES}",
+            "}",
+    ],
+    "description": "Enumeradores simples"
+  },
+  "Enum Completa": {
+    "prefix": "enum completa",
+    "body": [
+            "public enum ${1:}",
+            "{",
+            "    ${2:CONSTANTES};",
+            "",
+            "    private ${3:Tipo} ${4:variavel};",
+            "",
+            "    ${1:}(${3:Tipo} ${4:parametro})",
+            "    {",
+            "        this.${4:} = ${4:};",
+            "    }",
+            "}",
+    ],
+    "description": "Enumeradores completa"
+  },
+  "System.exit": {
+    "prefix": "exit",
+    "body": [
+            "System.exit(${1:0});",
+    ],
+    "description": "Terminar o programa com sucesso"
+  },
+}
