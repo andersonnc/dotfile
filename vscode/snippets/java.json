@@ -138,6 +138,20 @@
     ],
     "description": "ArrayList, também conhecido com lista"
   },
+  "Assert Simples": {
+    "prefix": "assert simples",
+    "body": [
+            "assert(${1:true} ${2:>} ${3:false});",
+    ],
+    "description": "Tratamento de erro"
+  },
+  "Assert Completo": {
+    "prefix": "assert completo",
+    "body": [
+            "assert(${1:true} ${2:>} ${3:false}):\"${4:msg}\";",
+    ],
+    "description": "Tratamento de erro"
+  },
   "Try": {
     "prefix": "try",
     "body": [
