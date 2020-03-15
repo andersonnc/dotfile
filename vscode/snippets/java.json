@@ -69,7 +69,7 @@
     ],
     "description": "Estrutura de seleção dupla"
   },
-  "if Else if": {
+  "If Else If": {
     "prefix": "if else if",
     "body": [
             "if (${1:true}) {",
@@ -104,7 +104,7 @@
     "description": "Estrutura de seleção múltipla"
   },
   "Printf": {
-    "prefix": "printlf",
+    "prefix": "printf",
     "body": [
             "System.out.printf(\"${1:}\", ${2:});",
     ],
@@ -214,7 +214,7 @@
             "    }",
             "}",
     ],
-    "description": "Declaração de entidade curta"
+    "description": "Declaração da classe curta"
   },
   "Classe Abstrata": {
     "prefix": "class abstract",
@@ -231,9 +231,9 @@
             "    public abstract ${5:Tipo} ${6:}();",
             "}",
     ],
-    "description": "Declaração de entidade abstrata"
+    "description": "Declaração da classe abstrata"
   },
-  "Class Heranaça": {
+  "Class Herança": {
     "prefix": "class herança",
     "body": [
             "public class ${1:} extends ${2:}",
@@ -246,7 +246,7 @@
             "    }",
             "}",
     ],
-    "description": "Declaração de entidade com herança"
+    "description": "Declaração da classe com herança"
   },
   "Class Completa": {
     "prefix": "class completa",
@@ -261,7 +261,7 @@
             "    }",
             "}",
     ],
-    "description": "Declaração de entidade completa"
+    "description": "Declaração da classe com herança e interface completa"
   },
   "Objeto": {
     "prefix": "objeto",
@@ -296,7 +296,7 @@
     "body": [
             "public Boolean is${1:}(){ return this.${2:variavel}; }",
     ],
-    "description": "Método is"
+    "description": "Método is, retorna um booleano"
   },
   "ToString": {
     "prefix": "metodo toString",
