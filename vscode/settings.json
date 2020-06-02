@@ -4,7 +4,6 @@
     "workbench.editor.closeOnFileDelete": false,
     "workbench.editor.highlightModifiedTabs":true,
     "workbench.editor.showTabs": false,
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.list.openMode":"singleClick",
     "workbench.settings.settingsSearchTocBehavior":"filter",
     "workbench.settings.useSplitJSON": false,
@@ -12,7 +11,6 @@
     "workbench.statusBar.visible": true,
     "workbench.tree.indent":8,
     "workbench.tree.renderIndentGuides":"onHover",
-    "workbench.useExperimentalGridLayout": true,
 
     "workbench.colorCustomizations": {
         "breadcrumb.foreground":"#00FFFF",
@@ -27,6 +25,7 @@
         //"editorRuler.foreground": "#00ffff23",
     },
 
+    "editor.padding.top": 10,
     "editor.accessibilitySupport":"auto",
     "editor.autoSurround":"quotes",
     "editor.colorDecorators":true,
@@ -61,11 +60,14 @@
     "breadcrumbs.symbolSortOrder":"type",
 
     "explorer.sortOrder":"default",
+    "explorer.incrementalNaming":"smart",
+    "explorer.compactFolders":false,
     "diffEditor.renderSideBySide": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "problems.decorations.enabled":true,
     "telemetry.enableCrashReporter": true,
     "telemetry.enableTelemetry": true,
+    
     
     "terminal.integrated.confirmOnExit":true, 
     "terminal.integrated.copyOnSelection": true,
@@ -77,10 +79,14 @@
     "terminal.integrated.fontWeightBold": "bold",
     "terminal.integrated.letterSpacing": 1,
     "terminal.integrated.lineHeight": 1.4,
-    "terminal.integrated.rendererType":"auto",
-    "terminal.integrated.shell.linux": "/bin/bash",
+
+    // "terminal.integrated.shellArgs.windows": ["/K",   "C:\\cmder\\vendor\\init.bat"],
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "terminal.integrated.cwd": "X:\\",
     "terminal.integrated.splitCwd":"workspaceRoot",
+    "terminal.integrated.rendererType":"auto",
     "terminal.integrated.windowsEnableConpty": true,
+    "terminal.integrated.minimumContrastRatio": 4.5,
 
     "debug.console.fontSize":16, 
     "debug.console.fontFamily":"'Noto Mono', Consolas, 'Fira Code'",
@@ -88,7 +94,6 @@
 
     "files.enableTrash": true,
     "files.eol":"auto",
-    
 
     "html.autoClosingTags": true,
     "html.suggest.html5": true,
