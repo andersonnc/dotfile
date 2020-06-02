@@ -7,7 +7,7 @@
 
 ### VS CODE
 <hr>
-<a href="http://github.com/andersonnc/dotfile/~">
+<a href="https://github.com/andersonnc/dotfile/tree/master/vscode">
     <p align="center">
         VSCODE
     </p>
