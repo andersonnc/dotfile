@@ -359,7 +359,7 @@
   "Is": {
     "prefix": "metodo is",
     "body": [
-            "public Boolean is${1:}(){ return this.${2:variavel}; }",
+            "public boolean is${1:}(){ return ${2:this.variavel}; }",
     ],
     "description": "Método is, retorna um booleano"
   },
@@ -413,7 +413,7 @@
   "Enum Simples": {
     "prefix": "enum simple",
     "body": [
-            "package ${1:enuns};",
+            "package ${1:enums};",
             "",
             "public enum ${2:}",
             "{",
@@ -426,7 +426,7 @@
   "Enum Completa": {
     "prefix": "enum completa",
     "body": [
-            "package ${1:enuns};",
+            "package ${1:enums};",
             "",
             "public enum ${2:}",
             "{",
