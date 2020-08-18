@@ -4,5 +4,10 @@
         "key": "ctrl+oem_102",
         "command": "workbench.action.terminal.split",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+f6",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
     }
 ]
