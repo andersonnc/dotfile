@@ -25,6 +25,7 @@
         //"editorRuler.foreground": "#00ffff23",
     },
 
+    
     "editor.padding.top": 10,
     "editor.accessibilitySupport":"auto",
     "editor.autoSurround":"quotes",
@@ -45,7 +46,9 @@
     "editor.renderLineHighlight":"line",
     "editor.renderWhitespace": "all",
     "editor.wordWrap": "off",
+    //"editor.wordWrapColumn": 80,
 
+    
     "window.autoDetectHighContrast": true,
     "window.menuBarVisibility":"toggle",
     "window.newWindowDimensions":"default",
@@ -54,11 +57,13 @@
     "window.titleBarStyle":"custom",
     "window.zoomLevel": 0,
 
+    
     "breadcrumbs.enabled": true,
     "breadcrumbs.filePath":"on",
     "breadcrumbs.symbolPath":"on",
     "breadcrumbs.symbolSortOrder":"type",
 
+    
     "explorer.sortOrder":"default",
     "explorer.incrementalNaming":"smart",
     "explorer.compactFolders":false,
@@ -79,7 +84,6 @@
     "terminal.integrated.fontWeightBold": "bold",
     "terminal.integrated.letterSpacing": 1,
     "terminal.integrated.lineHeight": 1.4,
-
     // "terminal.integrated.shellArgs.windows": ["/K",   "C:\\cmder\\vendor\\init.bat"],
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "terminal.integrated.cwd": "X:\\",
@@ -88,13 +92,16 @@
     "terminal.integrated.windowsEnableConpty": true,
     "terminal.integrated.minimumContrastRatio": 4.5,
 
+    
     "debug.console.fontSize":16, 
     "debug.console.fontFamily":"'Noto Mono', Consolas, 'Fira Code'",
     "debug.console.lineHeight":1.4,
 
+    
     "files.enableTrash": true,
     "files.eol":"auto",
 
+    
     "html.autoClosingTags": true,
     "html.suggest.html5": true,
 
@@ -145,7 +152,8 @@
         "files.trimFinalNewlines": true,
         "files.trimTrailingWhitespace": true,
     },
-
+    
+    
     "[java]":{
         "editor.autoClosingBrackets":"always",
         "editor.autoClosingQuotes":"always",
@@ -157,17 +165,34 @@
         "files.encoding": "utf8",
         "files.trimTrailingWhitespace": true,
     },
+   
+    
+    "[csharp]":{
+        "editor.autoClosingBrackets":"always",
+        "editor.autoClosingQuotes":"always",
+        "editor.insertSpaces": true,
+        "editor.rulers": [80,120],
+        "editor.tabSize": 4,
+        "editor.useTabStops": true,
+        "editor.wordBasedSuggestions": true,
+        "files.encoding": "utf8",
+        "files.trimTrailingWhitespace": true,
+        "editor.wordWrap":"bounded",
+    },
 
+    
     "files.exclude": {
         "removeArquivoDoEditor": true,
         "removePastaEditor/": true,
     },
+    
     
     "search.exclude": {
         "removeArquivoDaBuscaEditor": true,
         "removePastaDaBuscaEditor/": true,
     },
 
+    
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
         "vue-html": "html",
