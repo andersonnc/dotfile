@@ -1,0 +1,405 @@
+{
+  // Coloque seus trechos para csharp aqui. Cada snippet é definido sob um nome de snippet e tem um prefixo, corpo e
+  // descrição. O prefixo é o que é usado para acionar o snippet e o corpo será expandido e inserido. As variáveis possíveis são:
+  // $1, $2 para paradas de tabulação, $0 para a posição final do cursor e ${1:rótulo}, ${2:outro} para marcadores de posição. Marcadores de posição com o
+  // mesmos ids estão conectados.
+  // Exemplo:
+  // "Imprimir no console": {
+  //   "prefixo": "log",
+  //   "corpo": [
+  //     "console.log ('$1');",
+  //     "$2"
+  //   ],
+  //   "descrição": "Registrar a saída no console"
+  // }
+
+  //Saída de dados
+  "Placeholders": {
+    "prefix": "cwp",
+    "body": [
+      "Console.Write(\"${1:{0}} ${2:texto}\", ${3:parametro});",
+      "$0"
+    ],
+    "description": "Exibir o conteúdo na saída padrão sem quebra de linha"
+  },
+
+  "Interpolação": {
+    "prefix": "cwi",
+    "body": [
+      "Console.Write($\"${1:variavel} ${2:texto}\");",
+      "$0"
+    ],
+    "description": "Exibir o conteúdo na saída padrão sem quebra de linha"
+  },
+
+  "Concatenação": {
+    "prefix": "cwc",
+    "body": [
+      "Console.Write($1);",
+      "$0"
+    ],
+    "description": "Exibir o conteúdo na saída padrão sem quebra de linha"
+  },
+
+  "Console WriteLine": {
+    "prefix": "cwl",
+    "body": [
+      "Console.WriteLine($1);",
+      "$0"
+    ],
+    "description": "Exibir o conteúdo na saída padrão com uma quebra de linha"
+  },
+
+
+  //Entrada de dados
+  "Console ReadLine": {
+    "prefix": "cr",
+    "body": [
+      "Console.ReadLine()$0"
+    ],
+    "description": "Entrada de dado do tipo \"String\""
+  },
+
+  "Console ReadLine Double": {
+    "prefix": "crd",
+    "body": [
+      "double.Parse(Console.ReadLine(), ${1:CultureInfo.InvariantCulture})$0"
+    ],
+    "description": "Entrada de dado do tipo ponto fluatuante \"Double\" com o . como separador da centena"
+  },
+
+  "Console ReadLine Float": {
+    "prefix": "crf",
+    "body": [
+      "float.Parse(Console.ReadLine(), ${1:CultureInfo.InvariantCulture})$0"
+    ],
+    "description": "Entrada de dado do tipo ponto fluatuante \"Float\" com o . como separador da centena"
+  },
+
+  "Console ReadLine Inteiro": {
+    "prefix": "cri",
+    "body": [
+      "int.Parse(Console.ReadLine())$0"
+    ],
+    "description": "Entrada de dado do tipo Inteiro"
+  },
+
+  "Console ReadLine Caractere": {
+    "prefix": "crc",
+    "body": [
+      "char.Parse(Console.ReadLine())$0"
+    ],
+    "description": "Entrada de dado do tipo \"Char\""
+  },
+
+
+  //Estrutura de seleção
+  "If Simples": {
+    "prefix": "if simples",
+    "body": [
+      "if (${1:true}){",
+      "    ${0://code}",
+      "}"
+    ],
+    "description": "Seleção simples"
+  },
+
+  "If Duplo": {
+    "prefix": "if duplo",
+    "body": [
+      "if (${1:true}) {",
+      "    ${2://code}",
+      "} else {",
+      "    ${0://code}",
+      "}"
+    ],
+    "description": "Seleção dupla"
+  },
+
+  "If Encadeado": {
+    "prefix": "if encadeado",
+    "body": [
+      "if (${1:true}) {",
+      "    ${2://code}",
+      "} else if (${3:false}) {",
+      "    ${4://code}",
+      "} else {",
+      "    ${0://code}",
+      "}"
+    ],
+    "description": "Seleção encadeada"
+  },
+
+  "Switch Case": {
+    "prefix": "switch",
+    "body": [
+      "switch(${1:opcao}){",
+      "    case ${2:}:",
+      "        ${3:}",
+      "    break",
+      "    default:",
+      "        ${4:}",
+      "    break",
+      "}${0:}"
+    ],
+    "description": "Seleção"
+  },
+
+  "Expressão Condiçional Ternária": {
+    "prefix": "?:",
+    "body": [
+      "(${1:opcao}) ? ${1:verdairo} : ${2:falso} ${0:}",
+    ],
+    "description": "Seleção"
+  },
+
+  "Operador de Coalescência Nula": {
+    "prefix": "??",
+    "body": [
+      "${1:variavel} = {2:variavel} ?? {3:valor};$0",
+    ],
+    "description": "Verifica se o valor e \"nulo\" se não for, a atribuição rebece o valor da variável caso seja passa a recebe um valor alternativo"
+  },
+
+
+  //Estrutura de repetição
+  "For": {
+    "prefix": "for",
+    "body": [
+      "for (int ${1:i} = ${2:0}; ${1:} ${3:<} ${4:vetor}.Length; ${1:}++) {",
+      "    ${4:}[${1:}] = ${6};${0}",
+      "}"
+    ],
+    "description": "Estrutura de repetição"
+  },
+
+  "While": {
+    "prefix": "while",
+    "body": [
+      "while (${1:true}) {",
+      "    ${0://code}",
+      "}"
+    ],
+    "description": "Estrutura de repetição"
+  },
+
+  "For each": {
+    "prefix": "foreach",
+    "body": [
+      "foreach (${1:tipo} ${2:objeto} in ${3:vetor}) {",
+      "    ${4:Console.WriteLine(objeto)};",
+      "}${0:}"
+    ],
+    "description": "Estrutura de repetição"
+  },
+
+
+  //Classes
+  "Classe Padrao": {
+    "prefix": "classe padrao",
+    "body": [
+      "using System;",
+      "using System.Globalization;",
+      "",
+      "namespace ${1:App}",
+      "{",
+      "    class ${2:Program}",
+      "    {",
+      "        ${0://code}",
+      "    }",
+      "}"
+    ],
+    "description": "Classe padrão do dotnet no vscode, famoso \"EntryPoint\""
+  },
+
+  "Classe": {
+    "prefix": "classe simpels",
+    "body": [
+      "namespace ${1:App}",
+      "{",
+      "    class ${2:Nome}",
+      "    {",
+      "        ${3:private} ${4:tipo} ${5:Nome};",
+      "",
+      "        public ${2}(){}",
+      "        public ${2}(${4} ${6:paramentro})",
+      "        {",
+      "            ${5} = ${6};",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "description": "Classe simples"
+  },
+
+  "ToString": {
+    "prefix": "toString",
+    "body": [
+      "public override string ToString()",
+      "{",
+      "    return ${1:texto.ToString()};${0:}",
+      "}"
+    ],
+    "description": "Retorna um \"string\" quando imprimir o objeto na tela"
+  },
+
+  "Get": {
+    "prefix": "get",
+    "body": [
+      "public ${1:retorno} Get${2:Metodo}()",
+      "{",
+      "    return ${3:variavel};",
+      "}",
+      "${0:}"
+    ],
+    "description": "Retorna um atributo do objeto"
+  },
+
+  "Set": {
+    "prefix": "set",
+    "body": [
+      "public void Set${1:Metodo}(${2:tipo} ${3:parametro})",
+      "{",
+      "    if(${3:parametro} != null && ${3:parametro}.Length > 1) {",
+      "        ${4:variavel} = ${3:parametro};",
+      "    };",
+      "}",
+      "${0:}"
+    ],
+    "description": "Inseri um dado no atributo do objeto"
+  },
+
+  "Propriedades": {
+    "prefix": "propriedades",
+    "body": [
+      "get { return ${1:variavel}; }",
+      "set",
+      "{",
+      "    if(value != null && value.Length > 1) {",
+      "        ${1:variavel} = value;",
+      "    }",
+      "}$0"
+    ],
+    "description": "Método usando a técnica de propriedades, get e set"
+  },
+
+  "Propriedades Autoimplementada": {
+    "prefix": "auto propriedades",
+    "body": [
+      "public ${1:tipo} ${2:variavel} { get; private set; }",
+    ],
+    "description": "Método usando a técnica de propriedades, get e set com um escrita mais curta"
+  },
+
+
+  //Objetos
+  "Objeto": {
+    "prefix": "obj",
+    "body": [
+      "${1:Classe} ${2:objeto} = new ${1:}();${0:}",
+    ],
+    "description": "Instância um objeto"
+  },
+
+  "Objeto Alternativo": {
+    "prefix": "obja",
+    "body": [
+      "${1:Classe} ${2:objeto} = new ${1:}",
+      "{",
+      "    ${3:variavel} = ${4:dado}",
+      "};${0:}"
+    ],
+    "description": "Instância um objeto usando a sintaxe alternativo"
+  },
+
+
+  //Tipos de dados
+  "Nullable Tipo": {
+    "prefix": "nullable",
+    "body": [
+      "Nullable<${1:tipo}> ${2:variavel} = ${3:null};$0",
+    ],
+    "description": "Tipo de dado que aceito valor nulo"
+  },
+
+  "Nullable": {
+    "prefix": "null?",
+    "body": [
+      "${1:tipo}? ${2:variavel} = ${3:null};$0",
+    ],
+    "description": "Tipo de dado que aceito valor nulo"
+  },
+
+
+  //Espólio
+  "Environment.Exit": {
+    "prefix": "exit",
+    "body": [
+      "Environment.Exit($1);${0}"
+    ],
+    "description": "Força o término do programa, no ponto que chamado"
+  },
+
+  "GetValueOrDefault": {
+    "prefix": "get value or default",
+    "body": [
+      "${1:variavel}.GetValueOrDefault()$0",
+    ],
+    "description": "Imprimir o valor padrão caso exista ou valor da padrão de inicialização do tipo caso o valor seja nulo"
+  },
+
+  "HasValue": {
+    "prefix": "hasvalue",
+    "body": [
+      "${1:variavel}.HasValue$0",
+    ],
+    "description": "Retorna \"VERDADEIRO\" ou \"FALSO\" se o valor for igual a nulo"
+  },
+
+  "Value": {
+    "prefix": "value",
+    "body": [
+      "${1:variavel}.Value$0",
+    ],
+    "description": "Lança uma exceção se não houver valor \"nulo\""
+  },
+
+  "Passagem Por Referência": {
+    "prefix": "referencia",
+    "body": [
+      "public void ${1:Metodo}(ref ${2:parametro})",
+      "{",
+      "    ${2:} = ${3:logica}",
+      "}${0:}"
+    ],
+    "description": "Passagem por referência"
+  },
+
+  "Passagem Por Saída": {
+    "prefix": "saida",
+    "body": [
+      "public void ${1:Metodo}(${2:tipo} ${3:parametro} ,out ${3:parametro})",
+      "{",
+      "    ${3:} = ${2:}",
+      "}${0:}"
+    ],
+    "description": "Passagem por saída"
+  },
+
+  "Is Null Or Empty": {
+    "prefix": "isNullOrEmpty",
+    "body": [
+      "String.isNullOrEmpty(${1:variavel});$0",
+    ],
+    "description": "Verifica se a string e \"nula\" ou \"vazia\" retorna um booleano"
+  },
+
+  "Is Null Or WhiteSpace": {
+    "prefix": "isNullOrWhiteSpace",
+    "body": [
+      "String.isNullOrWhiteSpace(${1:variavel});$0",
+    ],
+    "description": "Verifica se a string e \"nula\" ou contém varios \"espaço em branco\" e retorna um booleano"
+  },
+}
+
