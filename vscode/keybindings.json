@@ -1,13 +1,35 @@
 // Coloque suas chave ligações neste arquivo para substituir os padrões
 [
+    // DOS
     {
         "key": "ctrl+oem_102",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    // UNIX
+    {
+        "key": "ctrl+\\",
         "command": "workbench.action.terminal.split",
         "when": "terminalFocus"
     },
     {
         "key": "ctrl+f6",
         "command": "workbench.action.toggleMaximizedPanel",
-        "when": "terminalFocus"
+        //"when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+f2",
+        "command": "editor.action.changeAll",
+        "when": "editorTextFocus && editorTextFocus && !editorReadonly"
     }
 ]
